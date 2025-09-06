@@ -3,13 +3,17 @@
 
 #include "Employee.h"
 
-class SalariedEmployee : public Employee {
-public:
-    double yearlyPayment;
+using namespace std;
 
-    SalariedEmployee(const std::string& name, int id, double yearlyPayment);
+class SalariedEmployee : public Employee {
+private:
+    double yearlyPayment;
+public:
+    SalariedEmployee();
+    SalariedEmployee(const string& name, int id, double yearlyPayment);
 
     double calculatePay() const override;
+    double getyearlyPayment();
 };
 
 #endif

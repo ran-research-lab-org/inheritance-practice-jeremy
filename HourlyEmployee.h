@@ -3,14 +3,20 @@
 
 #include "Employee.h"
 
+using namespace std;
+
 class HourlyEmployee : public Employee {
-public:
+private:
     double payPerHour;
     double workedHours;
+public:
 
-    HourlyEmployee(const std::string& name, int id, double payPerHour, double workedHours);
+    HourlyEmployee();
+    HourlyEmployee(const string& name, int id, double payPerHour, double workedHours);
 
     double calculatePay() const override;
+    double getPayPerHour();
+    double getWorkedHours();
 };
 
 #endif
